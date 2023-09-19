@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="data.dtd" type="application/xml-dtd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-model href="data.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<products>
+    <product product_id="p3" category="Carnivores">
+        <breed>aaaaa</breed>
+        <color>20</color>
+        <country>5</country>
+    </product>
+    <product product_id="p1" category="Herbivores">
+        <breed>bbbbb</breed>
+        <color>455</color>
+        <country>7777</country>
+    </product>
+    <product product_id="p2" category="Both">
+        <breed>ccccc</breed>
+        <color>7</color>
+        <country>2</country>
+    </product>
+</products>
+
+
+ />
+            

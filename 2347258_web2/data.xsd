@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="price_type">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="5" />
+            <xs:maxInclusive value="500" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="category_type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Carnivores" />
+            <xs:enumeration value="Herbivores" />
+            <xs:enumeration value="Both" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="quantity_type">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="10000" />
+        </xs:restriction>
+    </xs:simpleType>
+   
+    <xs:element name="products">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="breed" type="xs:string" />
+                            <xs:element name="color" type="price_type" />
+                            <xs:element name="country" type="quantity_type" />
+                        </xs:sequence>
+                        <xs:attribute name="product_id" use="required" />
+                        <xs:attribute name="category" type="category_type" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

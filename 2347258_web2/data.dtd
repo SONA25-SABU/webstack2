@@ -1,0 +1,7 @@
+<!ELEMENT products (product+)>
+<!ELEMENT product (breed,color,country)>
+<!ELEMENT breed (#PCDATA)>
+<!ELEMENT color (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ATTLIST product product_id ID #REQUIRED>
+<!ATTLIST product category (Carnivores|Herbivores|Both) "Sample Product" >
